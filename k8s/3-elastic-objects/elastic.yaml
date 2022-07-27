@@ -3,18 +3,18 @@ kind: Elasticsearch
 metadata:
   name: elasticsearch-stack
   namespace: elastic-stack
-  # annotations:
-  #   k8s-app: elasticsearch-stack
-  #   app.kubernetes.io/app-name: platform_logging
-  #   app.kubernetes.io/component: elasticsearch
-  #   app.kubernetes.io/version: 8.3.2
+  annotations:
+    k8s-app: elasticsearch-stack
+    app.kubernetes.io/app-name: platform_logging
+    app.kubernetes.io/component: elasticsearch
+    app.kubernetes.io/version: 8.3.2
 spec:
   version: 8.3.2
   nodeSets:
     - name: masters
       count: 3
       config:
-        nodes.roles: ["master"]
+        nodes.roles: master
         node.store.allow_mmap: false
   http:
     tls:
