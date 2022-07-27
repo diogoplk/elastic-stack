@@ -3,10 +3,11 @@ kind: Elasticsearch
 metadata:
   name: elasticsearch-stack
   namespace: elastic-stack
-  k8s-app: elasticsearch-stack
-  app.kubernetes.io/app-name: platform_logging
-  app.kubernetes.io/component: elasticsearch
-  app.kubernetes.io/version: 8.3.2
+  annotations:
+    k8s-app: elasticsearch-stack
+    app.kubernetes.io/app-name: platform_logging
+    app.kubernetes.io/component: elasticsearch
+    app.kubernetes.io/version: 8.3.2
 spec:
   version: 8.3.2
   nodeSets:
