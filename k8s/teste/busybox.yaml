@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox
+  namespace: default
+spec:
+  containers:
+    - image: busybox
+      command:
+        - curl
+        - "3600"
+      imagePullPolicy: IfNotPresent
+      name: busybox
+  restartPolicy: Always
+
+
+
+xQdQ1Bqn8J55yu8zD2692Hc6
+
+
+curl -X GET "localhost:9200/_cluster/health?pretty"
+quickstart-es-http
+
